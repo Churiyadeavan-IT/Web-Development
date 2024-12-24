@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Irish Grover", system-ui;
+    overflow: hidden;
+}
+
+/* For landscape devices */
+.instruction-page {
+    display: none;
+    transform: translateX(0);
+    transition: transform 0.7s ease-out;
+    opacity: 0%;
+    position: sticky;
+    z-index: 1;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    animation: ins 1s ease-out 1s forwards;
+}
+
+@keyframes ins {
+    100% {
+        opacity: 100%;
+    }
+}
+
+.instruction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: fit-content;
+    border: 2px dashed #d6b239;
+    border-radius: 10px;
+    padding: 2vw;
+    color: #d6b239;
+    text-align: justify;
+    font-size: 1.8vw;
+    line-height: 2.2vw;
+    letter-spacing: 0.1vw;
+    opacity: 100%;
+    transition: opacity 1.5s ease-out;
+}
+
+.instruction ul li {
+    margin: 1.1vw;
+}
+
+.instruction-btn {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    letter-spacing: 0.1vw;
+    background-color: transparent;
+    border: 2px solid #d6b239;
+    border-radius: 7px;
+    padding: 1vw;
+}
+
+.instruction-btn:is(:hover, :focus) {
+    box-shadow: 0px 0px 5px #d6b239;
+    background-color: #d6b239;
+    color: #600000;
+}
+
+.side-btn {
+    display: none;
+}
+
+.side-btn>button {
+    padding: 0.3vw;
+    font-family: inherit;
+    font-size: 1.5vw;
+    color: #d6b239;
+    letter-spacing: 0.1vw;
+    background-color: transparent;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    border-color: #d6b239;
+    border-radius: 7px;
+    opacity: 50%;
+}
+
+.side-btn>button:is(:hover, :focus) {
+    opacity: 100%;
+    box-shadow: 0px 0px 5px #d6b239;
+    background-color: #d6b239;
+    color: #600000;
+}
+
+
+
+/* For portrait devices */
+@media screen and (orientation:portrait) {
+
+    .instruction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        height: fit-content;
+        border: 2px dashed #d6b239;
+        border-radius: 5px;
+        padding: 2vh;
+        color: #d6b239;
+        text-align: justify;
+        font-size: 1.8vh;
+        line-height: 2.2vh;
+        letter-spacing: 0.1vh;
+        opacity: 100%;
+        transition: opacity 1.5s ease-out;
+    }
+
+    .instruction ul li {
+        margin: 1.1vh;
+    }
+
+    .instruction-btn {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        letter-spacing: 0.1vh;
+        background-color: transparent;
+        border: 2px solid #d6b239;
+        border-radius: 3px;
+        padding: 1vh;
+    }
+
+    .side-btn>button {
+        padding: 0.3vh;
+        font-family: inherit;
+        font-size: 1.5vh;
+        color: #d6b239;
+        letter-spacing: 0.1vh;
+        background-color: transparent;
+        border-width: 2px 2px 2px 2px;
+        border-style: solid;
+        border-color: #d6b239;
+        border-radius: 3px;
+        opacity: 50%;
+    }
+
+    .side-btn {
+        display: none;
+        transform: translateY(40vh);
+    }
+}
