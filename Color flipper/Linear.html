@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font family style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+
+    <!--Page style-->
+    <link rel="stylesheet" href="Style.css">
+    <title>Color Flipper</title>
+</head>
+
+<body id="body">
+
+    <!--Nav Bar-->
+    <header>
+        <nav class="nav-bar" id="nav-bar">
+            <h1>Color Flipper</h1>
+            <ul class="nav-bar-contents">
+                <li><a href="Index.html"><span>Hex</span></a></li>
+                <li><a href="Linear.html"><span>Linear Gradient</span></a></li>
+                <li><a href="Radial.html"><span>Radial Gradient</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Linear gradient color flipper-->
+    <section class="bg-lin-display" id="bg-lin-display">
+        <div class="bg-lin-value" id="bg-lin-value">
+            <div class="input-field-lin">
+                <input class="colors-count-lin" id="colors-count-lin" type="number" placeholder="Specify colors count">
+                <span id="lin-err-msg-1"></span>
+                <select name="order" class="colors-order-lin" id="colors-order-lin">
+                    <option value="" selected disabled hidden>Choose order</option>
+                    <option value="to right">Left to Right</option>
+                    <option value="to left">Right to Left</option>
+                    <option value="to bottom">Top to Bottom</option>
+                    <option value="to top">Bottom to Top</option>
+                </select><span id="lin-err-msg-2"></span>
+            </div>
+            <button class="Change-btn-lin" id="Change-btn-lin"><span>Change Color</span></button>
+            <button class="Change-btn-lin" id="view-btn-lin"><span>View Color Codes</span></button>
+        </div>
+    </section>
+
+    <!--Linear gradient color display-->
+    <section class="display-codes-lin" id="display-codes-lin">
+        <h2>Background-Color Code:</h2>
+        <div class="codes-div-lin" id="codes-div-lin">
+            <span>None</span>
+        </div>
+        <button class="Change-btn-lin" id="close-btn-lin"><span>Close</span></button>
+    </section>
+
+    <!--Linear gradient color flipper function-->
+    <script src="Linear_function.js"></script>
+
+</body>
+
+</html>
